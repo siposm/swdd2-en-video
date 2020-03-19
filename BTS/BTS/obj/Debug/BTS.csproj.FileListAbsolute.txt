@@ -5,3 +5,10 @@ C:\Users\sm\Desktop\BTS\BTS\obj\Debug\BTS.csprojAssemblyReference.cache
 C:\Users\sm\Desktop\BTS\BTS\obj\Debug\BTS.csproj.CoreCompileInputs.cache
 C:\Users\sm\Desktop\BTS\BTS\obj\Debug\BTS.exe
 C:\Users\sm\Desktop\BTS\BTS\obj\Debug\BTS.pdb
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\bin\Debug\BTS.exe.config
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\bin\Debug\BTS.exe
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\bin\Debug\BTS.pdb
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\obj\Debug\BTS.csprojAssemblyReference.cache
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\obj\Debug\BTS.csproj.CoreCompileInputs.cache
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\obj\Debug\BTS.exe
+C:\Users\sm\Desktop\swdd2-en-video\BTS\BTS\obj\Debug\BTS.pdb

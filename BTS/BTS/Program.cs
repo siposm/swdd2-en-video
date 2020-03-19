@@ -16,55 +16,8 @@ namespace BTS
         Research
     }
 
-    class Person
-    {
-        public string Name { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            return (obj as Person).Name.Equals(this.Name);
-        }
-
-        public override string ToString()
-        {
-            return string.Format("{0}", Name);
-        }
-    }
-
     class Program
     {
-        static bool Ft(int level, Person x) { return true; }
-
-        static bool Fk(Person[] results, int level, Person x)
-        {
-            for (int i = 0; i < level; i++)
-                if (results[i].Equals(x))
-                    return false;
-
-            return true;
-        }
-
-        static void BTS(int level, ref Person[] R, ref bool HAVE, int[] S, Person[,] P)
-        {
-            int i = -1;
-            while (!HAVE && i < S[level])
-            {
-                i++;
-                if (Ft(level, P[level, i]))
-                {
-                    if (Fk(R, level, P[level, i]))
-                    {
-                        R[level] = P[level, i];
-                        if (level == P.GetLength(0) - 1)
-                            HAVE = true;
-                        else
-                            BTS(level + 1, ref R, ref HAVE, S, P);
-                    }
-                }
-            }
-        }
-
-
         static void Main(string[] args)
         {
             Person[,] P = new Person[6, 3];
@@ -95,23 +48,17 @@ namespace BTS
 
 
             int[] S = { 1, 1, 0, 2, 1, 1 };
-
             Person[] R = new Person[6];
+            bool HAVE = false;
 
-            bool van = false;
-
-            BTS(0, ref R, ref van, S, P);
-
-
+            BackTrack.Search(0, ref R, ref HAVE, S, P);
 
             string[] projects = Enum.GetNames(typeof(Projects));
 
             for (int i = 0; i < R.Length; i++)
-            {
                 Console.WriteLine("\tPROJECT: {0} \tPERSON: {1}",
-                    projects[i],
-                    R[i]);
-            }
+                        projects[i],
+                        R[i]);
 
 
 
