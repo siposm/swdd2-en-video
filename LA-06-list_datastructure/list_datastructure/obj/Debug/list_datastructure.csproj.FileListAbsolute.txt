@@ -1,0 +1,7 @@
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\bin\Debug\list_datastructure.exe.config
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\bin\Debug\list_datastructure.exe
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\bin\Debug\list_datastructure.pdb
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.csprojAssemblyReference.cache
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.csproj.CoreCompileInputs.cache
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.exe
+C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.pdb
