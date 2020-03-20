@@ -5,3 +5,10 @@ C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastr
 C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.csproj.CoreCompileInputs.cache
 C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.exe
 C:\Users\sm\Desktop\list_datastructure\list_datastructure\obj\Debug\list_datastructure.pdb
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\bin\Debug\list_datastructure.exe.config
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\bin\Debug\list_datastructure.exe
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\bin\Debug\list_datastructure.pdb
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\obj\Debug\list_datastructure.csprojAssemblyReference.cache
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\obj\Debug\list_datastructure.csproj.CoreCompileInputs.cache
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\obj\Debug\list_datastructure.exe
+C:\Users\sm\Desktop\swdd2-en-video\LA-06-list_datastructure\list_datastructure\obj\Debug\list_datastructure.pdb

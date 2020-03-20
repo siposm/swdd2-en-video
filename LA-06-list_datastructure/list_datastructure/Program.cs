@@ -20,6 +20,32 @@ namespace list_datastructure
     {
         static void Main(string[] args)
         {
+            ChainedList<Person> pList = new ChainedList<Person>();
+
+            pList.Insert2Front(new Person()
+            {
+                Name = "Test Person 1"
+            });
+            pList.Insert2Front(new Person()
+            {
+                Name = "Test Person 2"
+            });
+            pList.Insert2Front(new Person()
+            {
+                Name = "Test Person 3"
+            });
+
+            foreach (Person item in pList)
+                Console.WriteLine("==> " + item);
+
+            pList[1].Name = "THIS IS MY NEW NAME";
+
+            for (int i = 0; i < pList.Count(); i++)
+                Console.WriteLine("~~> " + pList[i]);
+            
+            Console.WriteLine("\n\n\n");
+
+            #region testing
             ChainedList<Person> personList =
                 new ChainedList<Person>();
 
@@ -69,6 +95,8 @@ namespace list_datastructure
             {
                 Console.WriteLine("---> " + item);
             }
+
+            #endregion
         }
     }
 }
