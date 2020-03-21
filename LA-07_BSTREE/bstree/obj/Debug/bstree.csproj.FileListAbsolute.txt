@@ -1,0 +1,7 @@
+C:\Users\sm\Desktop\bstree\bstree\bin\Debug\bstree.exe.config
+C:\Users\sm\Desktop\bstree\bstree\bin\Debug\bstree.exe
+C:\Users\sm\Desktop\bstree\bstree\bin\Debug\bstree.pdb
+C:\Users\sm\Desktop\bstree\bstree\obj\Debug\bstree.csprojAssemblyReference.cache
+C:\Users\sm\Desktop\bstree\bstree\obj\Debug\bstree.csproj.CoreCompileInputs.cache
+C:\Users\sm\Desktop\bstree\bstree\obj\Debug\bstree.exe
+C:\Users\sm\Desktop\bstree\bstree\obj\Debug\bstree.pdb
