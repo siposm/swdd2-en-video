@@ -11,8 +11,6 @@ namespace bstree
         PreOrder, InOrder, PostOrder
     }
 
-    // T = content (Person)
-    // K = key (int)
     class BST<T,K> where K : IComparable
     {
         private TreeItem root;
@@ -28,15 +26,17 @@ namespace bstree
                 this.key = key; this.content = content;
             }
 
-            public override string ToString()
-            {
-                return $"{key.ToString()} - {content.ToString()}";
-            }
+            //public override string ToString()
+            //{
+            //    return $"{key.ToString()} - {content.ToString()}";
+            //}
         }
         public BST()
         {
             this.root = null;
         }
+
+        public delegate void TraversalHandler(T content);
 
         public void Insert(T content, K key)
         {
@@ -59,45 +59,47 @@ namespace bstree
 
         #region TRAVERSALS
 
-        public void Traverse(TraversalTypes type)
+        public void Traverse(TraversalTypes type, TraversalHandler methodToRun)
         {
+            TraversalHandler methodX = methodToRun;
+
             if (type == TraversalTypes.PreOrder)
-                PreOrder(this.root);
+                PreOrder(this.root, methodX);
 
             else if (type == TraversalTypes.InOrder)
-                InOrder(this.root);
+                InOrder(this.root, methodX);
 
             else if (type == TraversalTypes.PostOrder)
-                PostOrder(this.root);
+                PostOrder(this.root, methodX);
         }
 
-        private void PreOrder(TreeItem p)
+        private void PreOrder(TreeItem p, TraversalHandler method)
         {
             if(p != null)
             {
-                Console.WriteLine(p);
-                PreOrder(p.left);
-                PreOrder(p.right);
+                if (method != null) method(p.content);
+                PreOrder(p.left, method);
+                PreOrder(p.right, method);
             }
         }
 
-        private void InOrder(TreeItem p)
+        private void InOrder(TreeItem p, TraversalHandler method)
         {
             if (p != null)
             {
-                PreOrder(p.left);
-                Console.WriteLine(p);
-                PreOrder(p.right);
+                InOrder(p.left, method);
+                if (method != null) method(p.content);
+                InOrder(p.right, method);
             }
         }
 
-        private void PostOrder(TreeItem p)
+        private void PostOrder(TreeItem p, TraversalHandler method)
         {
             if (p != null)
             {
-                PreOrder(p.left);
-                PreOrder(p.right);
-                Console.WriteLine(p);
+                PostOrder(p.left, method);
+                PostOrder(p.right, method);
+                if (method != null) method(p.content);
             }
         }
 
