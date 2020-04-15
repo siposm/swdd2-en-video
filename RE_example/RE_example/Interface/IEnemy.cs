@@ -8,11 +8,17 @@ using System.Threading.Tasks;
 
 namespace RE_example.Interface
 {
-    public delegate void EnemyDeath_EventHandler();
+    public delegate void EnemyDeath_EventHandler(object sender, EventArgs args);
     public delegate void EnemyHealthCritical_EventHandler();
 
-    public interface IEnemy
+    public class EnemyDeathEventArgs : EventArgs
     {
+        public IEnemy DiedEnemy { get; set; }
+    }
+
+    public interface IEnemy : IComparable
+    {
+        bool Dead { get; set; }
         int Health { get; set; }
         Position Pos { get; set; }
         event EnemyHealthCritical_EventHandler EnemyHealthCritical;
@@ -21,23 +27,14 @@ namespace RE_example.Interface
 
     public interface IZombie : IEnemy
     {
-        void TakeDamage(int amount);
         int BulletsToDie { get; set; } // how many bullets can it take before dying
+        void TakeDamage(int amount);
         void BiteAttack(IPlayerCharacter player);
     }
 
     public interface IBossEnemy : IEnemy
     {
         void Heal();
-    }
-
-    public interface INemesis : IBossEnemy
-    {
         ChainedList<IPlayerCharacter> KilledPlayers { get; set; }
-    }
-
-    public interface IMrX : IBossEnemy
-    {
-
     }
 }

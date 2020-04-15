@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RE_example.DataStructure.BST&lt;T, K&gt;">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="RE_example.DataStructure.BST&lt;T, K&gt;.TreeItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataStructure\BSTree.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Delegate Name="RE_example.DataStructure.BST&lt;T, K&gt;.TraversalHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataStructure\BSTree.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAACMACAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataStructure\BSTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.DataStructure.ChainedList&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="RE_example.DataStructure.ChainedList&lt;T&gt;.ListItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataStructure\ChainedList.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Delegate Name="RE_example.DataStructure.ChainedList&lt;T&gt;.TraversalHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataStructure\ChainedList.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAIAAgAEABBABCACAAAQAAEAAAAgAIAAAACAAAAA=</HashCode>
+      <FileName>DataStructure\ChainedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RE_example.DataStructure.NoSuchItemException" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.DataStructure.KeyExistsException" Collapsed="true">
+    <Position X="13.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.GameLogic" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAAAIAAQEAhAAAAAAAAAECEAAAAAgAAAAAAgA=</HashCode>
+      <FileName>GameLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RE_example.Program" Collapsed="true">
+    <Position X="0.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAABBAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.Interface.EnemyDeathEventArgs" Collapsed="true">
+    <Position X="13.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.Model.CVirusZombie">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACCAAAgAAAAAA=</HashCode>
+      <FileName>Model\CVirusZombie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RE_example.Model.LasPlagasHostZombie">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAgAACAAA=</HashCode>
+      <FileName>Model\LasPlagasHostZombie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RE_example.Model.MoldedZombie">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAgAACAAA=</HashCode>
+      <FileName>Model\MoldedZombie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RE_example.Model.Position">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RE_example.Model.TVirusZombie">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAgAAAAAA=</HashCode>
+      <FileName>Model\TVirusZombie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RE_example.Model.ZombieBase">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAAAgQEAAAAAAAAAACBAJAAAAAACAAAAAA=</HashCode>
+      <FileName>Model\ZombieBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="RE_example.IGameLogic">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAgA=</HashCode>
+      <FileName>Interface\IGameLogic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RE_example.Interface.IEnemy">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAAAAAAAAAAAACBAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RE_example.Interface.IZombie">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAgAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RE_example.Interface.IBossEnemy">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RE_example.Interface.IPlayerCharacter">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IPlayerCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RE_example.DataStructure.TraversalTypes">
+    <Position X="10" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataStructure\BSTree.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="RE_example.Interface.EnemyDeath_EventHandler">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="RE_example.Interface.EnemyHealthCritical_EventHandler">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

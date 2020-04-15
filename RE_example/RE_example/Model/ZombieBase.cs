@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RE_example.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace RE_example.Model
 
     abstract class ZombieBase : IComparable, IEnemy
     {
+        public bool Dead { get; set; }
         public int Health { get; set; }
         public Position Pos { get; set; }
 
@@ -27,7 +29,18 @@ namespace RE_example.Model
 
         }
 
-        
+        public event EnemyHealthCritical_EventHandler EnemyHealthCritical;
+        public event EnemyDeath_EventHandler EnemyDied;
+
+        protected virtual void OnDied(EnemyDeathEventArgs edeargs)
+        {
+            if(!this.Dead)
+            {
+                this.Dead = true;
+                EnemyDied?.Invoke(this, edeargs);
+            }
+        }
+
         public override int GetHashCode()
         {
             return Math.Abs(this.GetType().GetHashCode());
@@ -40,6 +53,11 @@ namespace RE_example.Model
         public int CompareTo(object obj)
         {
             return this.GetHashCode().CompareTo((obj as ZombieBase).GetHashCode());
+        }
+
+        public override string ToString()
+        {
+            return $"[ {GetHashCode()} ] - {TypeName().ToString().Split('.')[2]} - Health: {Health} - Position: {Pos.PosX},{Pos.PosY}";
         }
     }
 }

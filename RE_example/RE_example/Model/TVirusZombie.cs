@@ -11,12 +11,20 @@ namespace RE_example.Model
     {
         public int BulletsToDie { get; set; }
 
-        public event EnemyHealthCritical_EventHandler EnemyHealthCritical;
-        public event EnemyDeath_EventHandler EnemyDied;
+        public void BiteAttack(IPlayerCharacter player)
+        {
+            throw new NotImplementedException();
+        }
 
         public void TakeDamage(int amount)
         {
             this.Health -= amount;
+
+            if (this.Health < 0)
+                base.OnDied(new EnemyDeathEventArgs()
+                {
+                    DiedEnemy = this
+                });
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RE_example.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +9,40 @@ namespace RE_example
 {
     class Program
     {
+        static void HR()
+        {
+            Console.WriteLine("\n\t------\n");
+        }
+
+        static void H1(string heading)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"\n\t{heading.ToUpper()}\n");
+            Console.ResetColor();
+        }
+
+        static Random r = new Random();
+
         static void Main(string[] args)
         {
-            ZombieBase[] zs = new ZombieBase[3];
+            GameLogic gl = new GameLogic();
+            gl.GenerateEnemies();
 
-            zs[0] = new TVirusZombie() { Health = 70, BulletsToDie = 6 };
-            zs[1] = new CVirusZombie();
-            zs[2] = new MoldedZombie();
+            H1("enemies from list to array, using foreach loop");
 
-            foreach (var item in zs)
-                Console.WriteLine(item.TypeName());
+            foreach (var item in gl.GetEnemiesToArray())
+                Console.WriteLine(item);
 
-            foreach (var item in zs)
-                Console.WriteLine(item.GetHashCode());
+            H1("sending 20 random damages to all enemies, watching event result");
 
-            Console.WriteLine("--------------");
-
-            MoldedZombie mz = new MoldedZombie();
-            mz.Health = 100;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 20; i++)
             {
-                mz.TakeDamage(10);
-                Console.WriteLine("[{0}] HEALTH STATUS: " + mz.Health, i);
+                foreach (IZombie item in gl.Enemies)
+                {
+                    item.TakeDamage(r.Next(1,45));
+                }
             }
+
         }
     }
 }

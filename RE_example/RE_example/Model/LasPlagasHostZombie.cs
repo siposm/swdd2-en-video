@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RE_example.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,17 @@ namespace RE_example.Model
                 this.Health -= amount;
                 damageCounter = 0;
             }
+
+            if (this.Health < 0)
+                base.OnDied(new EnemyDeathEventArgs()
+                {
+                    DiedEnemy = this
+                });
+        }
+
+        public void BiteAttack(IPlayerCharacter player)
+        {
+            throw new NotImplementedException();
         }
     }
 }
