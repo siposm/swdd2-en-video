@@ -43,15 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IEnemy.cs" />
+    <Compile Include="Interface\IGameLogic.cs" />
+    <Compile Include="Interface\IPlayerCharacter.cs" />
+    <Compile Include="Model\CVirusZombie.cs" />
     <Compile Include="DataStructure\BSTree.cs" />
     <Compile Include="DataStructure\ChainedList.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="GameLogic.cs" />
-    <Compile Include="Interfaces.cs" />
+    <Compile Include="Model\LasPlagasHostZombie.cs" />
+    <Compile Include="Model\MoldedZombie.cs" />
     <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\TVirusZombie.cs" />
+    <Compile Include="Model\ZombieBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

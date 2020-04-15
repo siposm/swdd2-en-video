@@ -66,7 +66,7 @@ namespace RE_example.DataStructure
 
         #region METHODS
 
-        public void Insert2Front(T newContent)
+        public void InsertToFront(T newContent)
         {
             ListItem newItem = new ListItem();
             newItem.content = newContent;
@@ -74,7 +74,7 @@ namespace RE_example.DataStructure
             head = newItem;
         }
 
-        public void Insert2Back(T newContent)
+        public void InsertToBack(T newContent)
         {
             ListItem newItem = new ListItem();
             newItem.content = newContent;
