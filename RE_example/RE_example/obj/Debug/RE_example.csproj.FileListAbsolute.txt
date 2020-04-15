@@ -1,0 +1,7 @@
+C:\Users\sm\Desktop\RE_example\RE_example\bin\Debug\RE_example.exe.config
+C:\Users\sm\Desktop\RE_example\RE_example\bin\Debug\RE_example.exe
+C:\Users\sm\Desktop\RE_example\RE_example\bin\Debug\RE_example.pdb
+C:\Users\sm\Desktop\RE_example\RE_example\obj\Debug\RE_example.csprojAssemblyReference.cache
+C:\Users\sm\Desktop\RE_example\RE_example\obj\Debug\RE_example.csproj.CoreCompileInputs.cache
+C:\Users\sm\Desktop\RE_example\RE_example\obj\Debug\RE_example.exe
+C:\Users\sm\Desktop\RE_example\RE_example\obj\Debug\RE_example.pdb
