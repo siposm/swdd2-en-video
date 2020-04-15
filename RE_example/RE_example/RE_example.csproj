@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructure\BSTree.cs" />
     <Compile Include="DataStructure\ChainedList.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="GameLogic.cs" />
