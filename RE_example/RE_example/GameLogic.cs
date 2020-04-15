@@ -35,11 +35,9 @@ namespace RE_example
                         Insert_CVirusZombie();
                         break;
                     case 2:
-                        Insert_LasPlagasHostZombie();
-                        break;
+                        Insert_LasPlagasHostZombie(); break;
                     case 3:
-                        Insert_MoldedZombie();
-                        break;
+                        Insert_MoldedZombie(); break;
                     case 4:
                         Insert_TVirusZombie();
                         break;
@@ -94,6 +92,9 @@ namespace RE_example
         {
             foreach (IEnemy item in Enemies)
                 item.EnemyDied += OnEnemyDiedMethod;
+
+            foreach (IEnemy item in Enemies)
+                item.EnemyHealthCritical += OnEnemyCriticalLevel;
         }
 
         private void OnEnemyDiedMethod(object sender, EventArgs e)
@@ -101,6 +102,10 @@ namespace RE_example
             Console.WriteLine($" >> EVENT LOG: { (e as EnemyDeathEventArgs).DiedEnemy } HAS DIED.");
         }
 
+        private void OnEnemyCriticalLevel(object sender, EventArgs e)
+        {
+            Console.WriteLine($" >> EVENT LOG: { (e as EnemyCriticalLevelEventArgs).Enemy } HAS REACHED CRITICAL HEALTH LEVEL.");
+        }
 
         public IEnemy[] GetEnemiesToArray()
         {

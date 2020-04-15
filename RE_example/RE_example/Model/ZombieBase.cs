@@ -32,6 +32,12 @@ namespace RE_example.Model
         public event EnemyHealthCritical_EventHandler EnemyHealthCritical;
         public event EnemyDeath_EventHandler EnemyDied;
 
+        protected virtual void OnCriticalLevel(EnemyCriticalLevelEventArgs ecleargs)
+        {
+            if (!this.Dead)
+                EnemyHealthCritical?.Invoke(this, ecleargs);
+        }
+
         protected virtual void OnDied(EnemyDeathEventArgs edeargs)
         {
             if(!this.Dead)

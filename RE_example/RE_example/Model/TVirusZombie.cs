@@ -21,10 +21,10 @@ namespace RE_example.Model
             this.Health -= amount;
 
             if (this.Health < 0)
-                base.OnDied(new EnemyDeathEventArgs()
-                {
-                    DiedEnemy = this
-                });
+                base.OnDied(new EnemyDeathEventArgs() { DiedEnemy = this });
+
+            if (this.Health < 25)
+                base.OnCriticalLevel(new EnemyCriticalLevelEventArgs() { Enemy = this });
         }
     }
 }

@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 namespace RE_example.Interface
 {
     public delegate void EnemyDeath_EventHandler(object sender, EventArgs args);
-    public delegate void EnemyHealthCritical_EventHandler();
+    public delegate void EnemyHealthCritical_EventHandler(object sender, EventArgs args);
 
     public class EnemyDeathEventArgs : EventArgs
     {
         public IEnemy DiedEnemy { get; set; }
+    }
+
+    public class EnemyCriticalLevelEventArgs : EventArgs
+    {
+        public IEnemy Enemy { get; set; }
+        public int CurrentHealthLevel { get; set; }
     }
 
     public interface IEnemy : IComparable
