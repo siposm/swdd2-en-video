@@ -43,7 +43,8 @@ namespace queue_and_stack_datastructure
 
         public void Traverse(TraversalHandler method)
         {
-            for (int i = 0; i <= count; i++)
+            //for (int i = 0; i <= count; i++) // bad order
+            for (int i = count; i >= 0; i--)
                 method(items[i]);
         }
     }
