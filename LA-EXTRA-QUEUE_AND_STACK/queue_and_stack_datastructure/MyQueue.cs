@@ -23,8 +23,7 @@ namespace queue_and_stack_datastructure
         {
             if (count >= 0)
                 return items[0];
-            else
-                throw new Exception("Queue is empty.");
+            throw new Exception("Queue is empty.");
         }
 
         public void Enqueue(T newItem)
@@ -48,8 +47,7 @@ namespace queue_and_stack_datastructure
 
                 return toReturn;
             }
-            else
-                throw new Exception("Queue is empty.");
+            throw new Exception("Queue is empty.");
         }
 
         public void Traverse(TraversalHandler method)
@@ -57,8 +55,6 @@ namespace queue_and_stack_datastructure
             for (int i = 0; i <= count; i++)
                 method(items[i]);
         }
-
-        // ------------
 
         private void Shift()
         {
