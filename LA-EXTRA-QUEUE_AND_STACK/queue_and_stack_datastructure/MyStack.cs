@@ -21,7 +21,7 @@ namespace queue_and_stack_datastructure
 
         public void Push(T newitem)
         {
-            if (count < items.Length)
+            if (count < items.Length - 1)
                 items[++count] = newitem;
             else
                 throw new Exception("Stack is full.");

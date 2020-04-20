@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace queue_and_stack_datastructure
@@ -93,6 +95,54 @@ namespace queue_and_stack_datastructure
             // :::::::::::::::::::::::::::::::::::::::::
 
             StackTesting();
+
+            // :::::::::::::::::::::::::::::::::::::::::
+            //  QUEUE DATA STRUCTURE - EXAMPLE 2
+            // :::::::::::::::::::::::::::::::::::::::::
+
+            HR();
+
+            MyQueue<SomeDelegate> methodQueue = new MyQueue<SomeDelegate>(5);
+
+            methodQueue.Enqueue(CalculateNumber);
+            methodQueue.Enqueue(MultiplyNumber);
+            methodQueue.Enqueue(AddingRandomBitsToNumber);
+            methodQueue.Enqueue(WriteOutNumber);
+
+            int _number = 0;
+
+            int limit = methodQueue.Count; // .Count changes as we take items out...
+            for (int i = 0; i <= limit; i++)
+                methodQueue.Dequeue()?.Invoke(ref _number);
+
+            HR();
+        }
+
+        public delegate void SomeDelegate(ref int _number);
+
+        static void CalculateNumber(ref int _number)
+        {
+            H1("... calculating the number ...");
+            _number = 230;
+            Console.WriteLine("\tNUMBER: " + _number);
+        }
+        static void MultiplyNumber(ref int _number)
+        {
+            H1("... multiplying the number ...");
+            _number *= 3;
+            Console.WriteLine("\tNUMBER: " + _number);
+        }
+        static void AddingRandomBitsToNumber(ref int _number)
+        {
+            H1("... adding random bits ...");
+            _number += new Random().Next(1, 15);
+            Console.WriteLine("\tNUMBER: " + _number);
+        }
+        static void WriteOutNumber(ref int _number)
+        {
+            H1("... writing out to file ...");
+            File.WriteAllLines("_OUTPUT.txt", new[] { _number.ToString() });
+            Console.WriteLine("\tDONE");
         }
     }
 }
